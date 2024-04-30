@@ -1,0 +1,329 @@
+* {
+    font-family: 'SUIT', sans-serif;
+}
+
+.feature-container {
+    padding: 20px;
+    min-height: 100dvh;
+}
+
+.feature-container h3 {
+    margin-top: 20px;
+    margin-right: 120px;
+    white-space: nowrap;
+}
+
+.feature-container .Logo:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+.user-div {
+    padding: 30px 20px 0;
+    margin: 0 auto 30px !important;
+    max-width: 935px;
+    height: 100%;
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    /* 수직 정렬 */
+    text-align: left;
+}
+
+.user-info {
+    /* 라벨과 닉네임 사이 여백 설정 */
+    font-size: 14px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.user-info button {
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    width: auto;
+    height: 32px;
+    margin-left: 10px;
+    padding: 0 16px;
+    font-weight: 500;
+}
+
+#followBtn {
+    background-color: #0095F6;
+    color: white;
+}
+#followBtn:hover {
+    background-color: #1877F2;
+}
+
+.user-info button:hover {
+    background-color: lightgray;
+}
+.menu-left {
+    padding-left: 14px !important;
+}
+
+.menu-tap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.menu-tap>* {
+    margin-bottom: 8px;
+    /* 요소 사이 간격 조절 */
+}
+
+/* 마지막 요소의 아래 여백 제거 */
+.menu-tap>*:last-child {
+    margin-bottom: 0;
+}
+
+.menu-tap button {
+    height: 48px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    /* 수직 정렬 */
+}
+
+.menu-tap button:hover {
+    background-color: whitesmoke;
+    font-weight: 700;
+}
+
+.menu-tap .text {
+    padding-left: 14px;
+}
+
+.menu-tap svg {
+    transition: transform 0.3s ease;
+    /* 애니메이션 전환 효과를 줍니다. */
+}
+
+.menu-tap button:hover svg {
+    transform: scale(1.08);
+    /* 마우스 호버 시 아이콘 크기를 1.2배 확대합니다. */
+}
+
+.user-stats {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.user-stats li {
+    font-size: 16px;
+    font-weight: 500;
+    list-style: none;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.user-stats a {
+    text-decoration: none;
+    color: #333;
+}
+
+.user-stats span {
+    margin-left: 5px;
+    /* 숫자와 텍스트 사이의 여백 조정 */
+    font-weight: bold;
+    /* 숫자의 굵기 설정 */
+}
+
+.profile-option:hover {
+    cursor: pointer;
+}
+
+.user-post-tap {
+    margin-top: 100px;
+    border-top: 1px solid lightgray;
+    width: 100%;
+    height: auto;
+}
+
+.user-post-tap button {
+    background-color: white;
+    border: none;
+    margin-right: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(161, 161, 161);
+    height: 52px;
+}
+
+.user-post-box {
+    width: 100%;
+    height: auto;
+}
+
+.user-post-box h3 {
+    font-weight: 800;
+}
+
+.user-post-box p {
+    font-weight: 300;
+}
+
+.user-post-box a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #0095F6;
+}
+
+.user-post-first {
+    margin-top: 100px;
+}
+
+.post-text {
+    outline: none;
+    width: 100%;
+    border: none;
+    padding: 10px;
+}
+
+.post-text:focus {
+    outline: none;
+}
+
+.post-text::placeholder {
+    color: lightgray;
+}
+
+.post-upload-btn {
+    background-color: white;
+    color: #0095F6;
+    border: none;
+    text-align: right;
+    height: auto !important;
+    margin-top: 10px;
+}
+
+.post-upload-btn:hover{
+    background-color: white !important;
+    font-weight: 700;
+}
+
+.post-count-char {
+    text-align: right;
+    font-size: 12px;
+    color: lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+.user-posts-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px; /* 여러 박스 사이의 간격 조절 */
+    justify-content: center;
+}
+
+.post-box {
+    width: calc(33.333% - 4px); /* 3개의 열로 나누고 간격을 뺍니다. */
+    aspect-ratio: 1 / 1; /* 1:1 비율 */
+}
+
+.post-box img {
+    width: 100%; /* 이미지를 100%로 설정하여 부모 요소(post-box)에 맞춤 */
+    height: 100%; /* 높이도 100%로 설정하여 부모 요소(post-box)에 맞춤 */
+    object-fit: cover; /* 이미지가 왜곡되지 않고 post-box에 맞게 조절됨 */
+    object-position: center; /* 이미지를 가운데로 정렬 */
+}
+
+.post-box img:hover {
+    cursor: pointer;
+}
+
+.post-content-box {
+    border-bottom: 1px solid #f1f3f5;
+    margin-top: 5px;
+}
+
+.post-content-box::-webkit-scrollbar {
+    display: none;
+}
+
+.content-wrapper {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+}
+
+.post-comment {
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    text-align: left;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.post-comment-input {
+    margin-top: 5px;
+    border: none;
+}
+
+.post-comment-input input{
+    font-size: 14px;
+    border: none;
+    width: 100%;
+}
+
+.post-comment-input input:focus{
+    outline: none;
+}
+
+.post-comment-input input::placeholder{
+    color: lightgray;
+    font-size: 14px;
+}
+
+.post-comment-input button {
+    color: #0095F6;
+    height: auto;
+    border: none;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.post-comment-input button:hover {
+    background-color: white;
+}
+
+#followerlistBtn:hover {
+    cursor: pointer;
+}
+
+#followlistBtn:hover {
+    cursor: pointer;
+}
+
+.search-container {
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+    padding: 5px;
+}
+.search-container input {
+    background-color: rgb(236, 236, 236);
+    border: none;
+}
+
+.search-container input:focus {
+    outline: none;
+}
+
+.following-list-btn:hover {
+    cursor: pointer;
+    font-weight: 700;
+}

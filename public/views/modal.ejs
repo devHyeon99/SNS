@@ -1,0 +1,141 @@
+<!-- modal.ejs -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel" style="text-align: center; margin: 0 auto;">파일 선택하기</h1>
+      </div>
+      <div class="modal-body">
+        <!-- Modal body content -->
+        <div class="photo-box" style="display: flex; flex-direction: column; height: 400px; text-align: center; align-items: center; justify-content: center;">
+          <p>사진과 동영상을 여기에 끌어다 놓으세요</p>
+          <input type="file" id="fileInput" accept="image/*" style="display: none;">
+          <div type="button" id="post-write" class="btn btn-primary" style="background-color: #0095F6; border: none;">
+            컴퓨터에서 선택
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-bs-dismiss="modal" style="position: fixed; top: 10px; right: 10px; z-index: 1050;">
+    <svg aria-label="닫기" sfill="currentColor" height="18" role="img" viewBox="0 0 24 24" width="18" style="color: white; cursor:pointer;">
+      <title>닫기</title>
+      <polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline>
+      <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line>
+    </svg>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel" style="text-align: center; margin: 0 auto;">게시글 작성하기</h1>
+      </div>
+      <div class="modal-body row" style="height: 500px; padding-top: 0px; padding-bottom: 0px;">
+        <div class="col-md-7 d-flex align-items-center justify-content-center" style="border-right: 1px solid lightgray; padding: 0 !important;">
+          <img id="imagePreview" src="#" alt="Selected Image" style="max-width: 100%; max-height: 800px;">
+        </div>
+        <div class="col-md-5" style="padding: 0 !important;">
+          <textarea id="post-text" class="post-text" rows="9.5" style="resize: none;" placeholder="문구를 입력하세요.."></textarea>
+          <div id="charCount" class="post-count-char">0/1500</div>
+          <div class="d-flex justify-content-end">
+            <button type="button" id="postuploadBtn" class="post-upload-btn">공유하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-bs-dismiss="modal" style="position: fixed; top: 10px; right: 10px; z-index: 1050;">
+    <svg aria-label="닫기" sfill="currentColor" height="18" role="img" viewBox="0 0 24 24" width="18" style="color: white; cursor:pointer;">
+      <title>닫기</title>
+      <polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline>
+      <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line>
+    </svg>
+  </div>
+</div>
+
+<!-- Post Modal -->
+<div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" style="height: 92vh;">
+    <div class="modal-content" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;">
+      <div class="modalbody" style="display: flex;">
+        <div class="col-md-7 img" style="display: flex; align-items: center; justify-content: center; padding: 0px;">
+
+        </div>
+        <div class="col-md-5" style="padding: 0px;">
+          <div class="user-post-info" style="display: flex; border-bottom: 1px solid #f1f3f5; height: auto; 
+          text-align: left; padding: 15px; gap: 10px;">
+            <img src="../img/porfile.jpeg" style="width: 32px; height: 32px;">
+            <div id="user_post_id" style="cursor: pointer; display: flex; text-align: center; align-items: center; justify-content: center; 
+            font-size: 14px; font-weight: 700;">admin</div>
+          </div>
+          <div class="post-content-box" style="height: 70%; max-height: 500px; overflow-y: auto;">
+            <div class="content-wrapper" style="flex-wrap: wrap;">
+              <img src="../img/porfile.jpeg" style="width: 32px; height: 32px;">
+              <div id="post_user_id" style="font-size: 14px; font-weight: 700; cursor: pointer;">admin</div>
+              <span id="post_content" style="font-size: 12px; font-weight: 500; flex: 1; text-align: left;">사용자가 쓴 내용</span>
+              <div id="timestamp" style="position: relative; font-size: 10px; color: gray; width: 100%; 
+              text-align: left; padding-left: 9.5%; top: -10px; height: 0px;">1시간</div>
+            </div>
+            <div id="commentsContainer" class="comments-container">
+              <div class="content-wrapper">
+                <img src="../img/porfile.jpeg" style="width: 32px; height: 32px;">
+                <div style="font-size: 14px; font-weight: 700;">윤동희</div>
+                <span style="font-size: 12px;">사용자가 쓴 내용 및 댓글</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-comment">
+            <div id="post-like">
+              <svg aria-label="좋아요" class="like" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24">
+                <title>좋아요</title>
+                <path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path>
+              </svg>
+            </div>
+            <div class="user-like-box">
+              <div class="content-wrapper" style="padding: 0px; padding-top: 10px; padding-left: 2px;">
+                <img src="../img/porfile.jpeg" style="width: 20px; height: 20px;">
+              </div>
+            </div>
+          </div>
+          <div class="post-comment-input">
+            <div class="content-wrapper">
+              <input id="comment-content" type="text" placeholder="댓글을 입력하세요...">
+              <button id="comment-upload-btn" type="button">게시</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-bs-dismiss="modal" style="position: fixed; top: 10px; right: 10px; z-index: 1050;">
+    <svg aria-label="닫기" fill="currentColor" height="18" role="img" viewBox="0 0 24 24" width="18" style="color: white; cursor:pointer;">
+      <title>닫기</title>
+      <polyline fill="none" points="20.643 3.357 12 12 3.353 20.647" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline>
+      <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" x1="20.649" x2="3.354" y1="20.649" y2="3.354"></line>
+    </svg>
+  </div>
+</div>
+
+<div class="modal fade follow-List" id="followerModal" tabindex="-1" role="dialog" aria-labelledby="followerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center" style="padding: 10px;">
+        <h5 class="modal-title w-100" id="followerModalLabel">팔로워</h5>
+        <div type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; right: 16px;"></div>
+      </div>
+      <div class="modal-body" style="height: 400px;">
+        <div class="content-wrapper search-container">
+          <svg class="search-icon" width="24" height="24" viewBox="0 0 48 48">
+            <path d="M 20.5 6 C 12.509634 6 6 12.50964 6 20.5 C 6 28.49036 12.509634 35 20.5 35 C 23.956359 35 27.133709 33.779044 29.628906 31.75 L 39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453 L 31.75 29.628906 C 33.779044 27.133709 35 23.956357 35 20.5 C 35 12.50964 28.490366 6 20.5 6 z M 20.5 9 C 26.869047 9 32 14.130957 32 20.5 C 32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016 C 26.405717 30.776199 23.602614 32 20.5 32 C 14.130953 32 9 26.869043 9 20.5 C 9 14.130957 14.130953 9 20.5 9 z"></path>
+          </svg>
+          <input type="text" id="searchInput" placeholder="검색">
+        </div>
+        <div class="search-list">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

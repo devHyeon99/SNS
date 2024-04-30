@@ -1,0 +1,13 @@
+<!-- profile.ejs -->
+<div class="user-posts-box">
+  <% for (const post of posts) { %>
+      <div id= post_id<%= post.post_id %> class="post-box">
+          <% if (post.image_data) { %>
+              <% const imageDataBase64 = post.image_data.toString('base64'); %>
+              <img src="data:image/png;base64,<%= imageDataBase64 %>" alt="Post Image">
+          <% } else { %>
+              <p>No Image</p>
+          <% } %>
+      </div>
+  <% } %>
+</div>

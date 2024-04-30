@@ -1,0 +1,120 @@
+* {
+    font-family: 'SUIT', sans-serif;
+}
+
+.feature-container {
+    padding: 20px;
+    min-height: 100dvh;
+}
+
+.feature-container h3 {
+    margin-top: 20px;
+    margin-right: 120px;
+    white-space: nowrap;
+}
+
+.feature-container .Logo:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    /* 수직 정렬 */
+    text-align: left;
+}
+
+.user-info {
+    margin-left: 10px;
+    /* 라벨과 닉네임 사이 여백 설정 */
+    font-size: 14px;
+}
+
+.menu-left {
+    padding-left: 14px !important;
+}
+
+.menu-tap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.menu-tap>* {
+    margin-bottom: 8px;
+    /* 요소 사이 간격 조절 */
+}
+
+/* 마지막 요소의 아래 여백 제거 */
+.menu-tap>*:last-child {
+    margin-bottom: 0;
+}
+
+.menu-tap button {
+    height: 48px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    /* 수직 정렬 */
+}
+
+.menu-tap button:hover {
+    background-color: whitesmoke;
+    font-weight: 700;
+}
+
+.menu-tap .text {
+    padding-left: 14px;
+}
+
+.menu-tap svg {
+    transition: transform 0.3s ease;
+    /* 애니메이션 전환 효과를 줍니다. */
+}
+
+.menu-tap button:hover svg {
+    transform: scale(1.08);
+    /* 마우스 호버 시 아이콘 크기를 1.2배 확대합니다. */
+}
+
+.post-text {
+    outline: none;
+    width: 100%;
+    border: none;
+    padding: 10px;
+}
+
+.post-text:focus {
+    outline: none;
+}
+
+.post-text::placeholder {
+    color: lightgray;
+}
+
+.post-upload-btn {
+    background-color: white;
+    color: #0095F6;
+    border: none;
+    text-align: right;
+    height: auto !important;
+    margin-top: 10px;
+}
+
+.post-upload-btn:hover {
+    background-color: white !important;
+    font-weight: 700;
+}
+
+.post-count-char {
+    text-align: right;
+    font-size: 12px;
+    color: lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
